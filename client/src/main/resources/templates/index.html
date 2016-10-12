@@ -19,8 +19,10 @@
     <div class="jumbotron">
         <h1>Client</h1>
         <h2>Authorization Code: <span th:text="${authCode}" id="auth-code"></span></h2>
-        <h2>Access Token: <span id="token"></span></h2>
+        <h2>Access Token: <span th:text="${token}" id="token"></span></h2>
         <br />
+        <a id="button-getAuthCode" class="btn btn-primary" th:href="@{/getAuthCode}">Get Auth Code</a>
+        <a id="button-getToken" class="btn btn-primary" th:href="@{/getToken}">Get Access Token</a>
         <a id="button-getResource" class="btn btn-primary" th:href="@{/getResource}">Get Patient Resource</a>
     </div>
     <br />
