@@ -22,8 +22,29 @@
         <h2>Access Token: <span id="token"></span></h2>
         <br />
         <a id="button-getResource" class="btn btn-primary" th:href="@{/getResource}">Get Patient Resource</a>
-
     </div>
+    <br />
+    <h1>Patient Info</h1>
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th>Medical Order</th>
+            <th>Dosage</th>
+        </tr>
+        <tr data-th-each="patient : ${patientList}">
+            <td data-th-text="${patient.patientId}">...</td>
+            <td data-th-text="${patient.firstName}">...</td>
+            <td data-th-text="${patient.lastName}">...</td>
+            <td data-th-text="${patient.gender}">...</td>
+            <td data-th-text="${patient.status}">...</td>
+            <td data-th-text="${patient.medicalOrder}">...</td>
+            <td data-th-text="${patient.dosage}">...</td>
+        </tr>
+    </table>
 </div>
 
 
