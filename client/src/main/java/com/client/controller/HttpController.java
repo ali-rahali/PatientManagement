@@ -70,6 +70,8 @@ public class HttpController {
     public String getResource(Model model) throws IOException {
         List<Patient> patientList = httpService.getResource(this.token);
 
+        model.addAttribute("authCode", "Auth Code Expired");
+        model.addAttribute("token", token);
         model.addAttribute("patientList", patientList);
 
         return "index";
