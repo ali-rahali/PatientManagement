@@ -74,4 +74,12 @@ public class HttpController {
 
         return "index";
     }
+
+    @RequestMapping("/getPublicResource")
+    public String getPublicResource(Model model) throws IOException {
+        String sentence = httpService.getPublicInfo();
+        model.addAttribute("sentence", sentence);
+
+        return "index";
+    }
 }

@@ -116,4 +116,23 @@ public class HttpServiceImpl implements HttpService{
         return patientList;
 
     }
+
+    public String getPublicInfo() throws IOException {
+        CloseableHttpClient client = HttpClients.createDefault();
+
+        HttpGet httpGet = new HttpGet("http://localhost:8082/public/resource");
+
+        CloseableHttpResponse response = client.execute(httpGet);
+
+        BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+
+        StringBuffer result = new StringBuffer();
+        String line = "";
+        while ((line = rd.readLine()) != null) {
+            result.append(line);
+        }
+
+        return result.toString();
+    }
+
 }

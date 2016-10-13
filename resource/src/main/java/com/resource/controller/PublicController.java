@@ -1,6 +1,5 @@
 package com.resource.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,14 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/public")
 public class PublicController {
 
-    @RequestMapping("/resource1")
+    @RequestMapping("/resource")
     public String resource1() {
-        return "Here is public resource 1.";
+        return "Here is public resource. This is to show that when a resource is configured for public access, it doesn't need to go through the OAuth flow.";
     }
 
-    @RequestMapping("/resource2")
-    public String resource2() {
-        return "Here is public resource 2.";
-    }
+
 
 }

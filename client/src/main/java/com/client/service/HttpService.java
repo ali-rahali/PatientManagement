@@ -17,4 +17,6 @@ public interface HttpService {
     List<Patient> getResource(String token) throws IOException, JSONException;
 
     List<Patient> responseParser(CloseableHttpResponse response) throws IOException, JSONException;
+
+    String getPublicInfo() throws IOException;
 }
