@@ -1,12 +1,13 @@
 package com.client.service;
 
-import com.client.domain.Patient;
-import com.oracle.javafx.jmx.json.JSONException;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.List;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.client.domain.Patient;
 
 /**
  * Created by z00382545 on 10/11/16.
